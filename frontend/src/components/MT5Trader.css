@@ -1,0 +1,100 @@
+.mt5-trader-container {
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #282c34; /* 与App.css内容区域背景色一致 */
+    color: #abb2bf; /* 与App.css默认文本颜色一致 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.mt5-trader-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #61afef; /* 标题颜色 */
+}
+
+.card {
+    background-color: #21252b; /* 与App.css导航栏背景色一致 */
+    border: 1px solid #3a3f47; /* 与App.css边框颜色一致 */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #3a3f47;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #61afef; /* 卡片标题颜色 */
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.input-group input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #4b5263;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #3a3f47; /* 输入框背景色 */
+    color: #abb2bf; /* 输入框文本颜色 */
+}
+
+.input-group button {
+    padding: 10px 20px;
+    background-color: #98c379; /* 按钮颜色 */
+    color: #282c34; /* 按钮文本颜色 */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.input-group button:disabled {
+    background-color: #5c6370;
+    cursor: not-allowed;
+}
+
+.input-group button:hover:not(:disabled) {
+    background-color: #7b9e66;
+}
+
+.success-message {
+    margin-top: 15px;
+    color: #98c379;
+    background-color: #21252b;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #7b9e66;
+}
+
+.error-message {
+    margin-top: 15px;
+    color: #e06c75;
+    background-color: #21252b;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #be5046;
+}
+
+.log-box {
+    background-color: #2b2b2b;
+    color: #f1f1f1;
+    padding: 15px;
+    border-radius: 4px;
+    height: 200px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    border: 1px solid #3a3f47;
+}

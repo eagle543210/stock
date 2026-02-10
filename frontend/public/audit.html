@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>Trade Audit Viewer</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin:20px }
+    table { border-collapse: collapse; width:100% }
+    th, td { border:1px solid #ddd; padding:8px }
+    th { background:#f4f4f4 }
+    input { padding:6px; margin-right:6px }
+  </style>
+</head>
+<body>
+  <h2>Trade Audit Viewer</h2>
+  <div>
+    <label>Audit ID: <input id="auditId" placeholder="输入 audit_id 搜索"></label>
+    <button onclick="fetchById()">查询</button>
+    <button onclick="loadRecent()">加载最近 50 条</button>
+  </div>
+  <pre id="output" style="background:#f9f9f9;padding:10px;border:1px solid #eee;margin-top:12px"></pre>
+  <script>
+    const out = document.getElementById('output')
+    async function fetchById(){
+      const id = document.getElementById('auditId').value.trim()
+      if(!id){ out.textContent='请输入 audit_id'; return }
+      out.textContent = '加载中...'
+      try{
+        const r = await fetch('/audit/' + encodeURIComponent(id))
+        if(!r.ok){ out.textContent = '未找到或出错: ' + r.status; return }
+        const j = await r.json()
+        out.textContent = JSON.stringify(j, null, 2)
+      }catch(e){ out.textContent = '错误: '+e }
+    }
+    async function loadRecent(){
+      out.textContent = '加载中...'
+      try{
+        const r = await fetch('/audit/recent')
+        const j = await r.json()
+        out.textContent = JSON.stringify(j, null, 2)
+      }catch(e){ out.textContent = '错误: '+e }
+    }
+  </script>
+</body>
+</html>

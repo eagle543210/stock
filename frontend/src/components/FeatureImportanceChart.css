@@ -1,0 +1,18 @@
+/* FeatureImportanceChart.css */
+.feature-importance-chart-container {
+    background-color: #21252b; /* 与App.css导航栏背景色一致 */
+    border: 1px solid #3a3f47; /* 边框颜色 */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    width: 100%; /* 确保宽度适应父容器 */
+    max-width: 800px; /* 限制最大宽度 */
+    margin: 20px auto; /* 居中 */
+}
+
+.feature-importance-chart-container h2 {
+    text-align: center;
+    color: #61afef; /* 标题颜色 */
+    margin-bottom: 20px;
+}

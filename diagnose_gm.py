@@ -1,0 +1,2 @@
+import gm
+print(gm)

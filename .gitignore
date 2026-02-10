@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+ENV/
+
+# Large files & Data
+*.joblib
+*.rar
+*.zip
+*.7z
+stock_data_cache/
+*.db
+*.log
+*.wav
+prediction_log.csv
+debug_output.txt
+debug_date_output.txt
+
+# Environment variables
+.env
+secret.json
+*.key
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store

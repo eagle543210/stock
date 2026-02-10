@@ -1,0 +1,79 @@
+.controls-panel {
+    background-color: #21252b; /* 与App.css导航栏背景色一致 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 900px; /* 与图表宽度保持一致 */
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    color: #abb2bf; /* 默认文本颜色 */
+}
+
+.controls-panel h2 {
+    text-align: center;
+    color: #61afef; /* 标题颜色 */
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #abb2bf; /* 标签颜色 */
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: calc(100% - 22px); /* 减去padding和border */
+    padding: 10px;
+    border: 1px solid #4b5263; /* 边框颜色 */
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #3a3f47; /* 输入框背景色 */
+    color: #abb2bf; /* 输入框文本颜色 */
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: normal;
+    color: #abb2bf; /* 单选/复选框标签颜色 */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.radio-group input[type="radio"], .checkbox-group input[type="checkbox"] {
+    margin-right: 0;
+    /* 调整复选框/单选框的颜色，可能需要更复杂的CSS来覆盖浏览器默认样式 */
+    accent-color: #61afef; /* 选中时的颜色 */
+}
+
+.controls-panel button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #98c379; /* 按钮颜色与App.css中的诊断按钮一致 */
+    color: #282c34; /* 按钮文本颜色 */
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls-panel button[type="submit"]:hover {
+    background-color: #7b9e66; /* 按钮hover颜色 */
+}
+
+.controls-panel button[type="submit"]:disabled {
+    background-color: #5c6370;
+    cursor: not-allowed;
+}

@@ -1,0 +1,8 @@
+Proxy: None
+Target: https://testnet.binancefuture.com/dapi/v1/exchangeInfo
+
+[1] AIOHTTP Standard
+  Status: 200
+
+[2] CCXT
+  SUCCESS

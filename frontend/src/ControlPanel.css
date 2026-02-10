@@ -1,0 +1,156 @@
+:root {
+  --primary-bg: #1a1a1a;
+  --secondary-bg: #21252b; /* 与App.css导航栏背景色一致 */
+  --card-bg: #282c34; /* 与App.css内容区域背景色一致 */
+  --text-color: #abb2bf; /* 与App.css默认文本颜色一致 */
+  --primary-color: #61afef; /* 与App.css导航链接颜色一致 */
+  --border-color: #3a3f47; /* 与App.css边框颜色一致 */
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.control-panel {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  /* 移除 padding，让 .content 统一控制 */
+}
+
+.control-panel h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--primary-color); /* 标题颜色 */
+}
+
+.task-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 调整为自适应列，每列最小300px */
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  justify-content: center; /* 使网格项居中 */
+  max-width: 800px; /* 限制task-cards容器的最大宽度，以便居中 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.card p {
+  flex-grow: 1;
+  color: var(--text-color); /* 调整段落颜色 */
+}
+
+.card button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #98c379; /* 按钮颜色与App.css中的诊断按钮一致 */
+  color: #282c34; /* 按钮文本颜色 */
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.card button:hover {
+  background-color: #7b9e66; /* 按钮hover颜色 */
+}
+
+.card button:disabled {
+  background-color: #5c6370; /* 禁用按钮颜色 */
+  cursor: not-allowed;
+}
+
+.outputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1200px; /* 限制outputs容器的最大宽度，以便居中 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.log-output, .result-output {
+  background-color: var(--card-bg); /* 与card背景色一致 */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.log-output h2, .result-output h2 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  color: var(--primary-color); /* 标题颜色 */
+}
+
+.log-box {
+  background-color: #21252b; /* 与App.css日���窗口背景色一致 */
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 4px;
+  height: 400px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  flex-grow: 1;
+}
+
+.result-table-container {
+    height: 400px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.result-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result-table-container th, .result-table-container td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.result-table-container th {
+  background-color: #3a3f47; /* 表头背景色 */
+  color: var(--primary-color); /* 表头文本颜色 */
+}
+
+.result-table-container tr {
+    background-color: var(--card-bg); /* 行背景色 */
+}
+
+.result-table-container tr:hover {
+    background-color: #333842; /* 行hover背景色 */
+}
+
+@media (max-width: 768px) {
+  .outputs {
+    grid-template-columns: 1fr;
+  }
+}
